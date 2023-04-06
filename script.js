@@ -10,7 +10,7 @@ var userChoices;
 
 var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 // Var To Upper Case ------------
-var blankUpper = [];
+var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var toUpper = function (x) {
   return x.toUpperCase();
 };
@@ -34,14 +34,14 @@ generateBtn.addEventListener("click", writePassword);
 // Start Function
 function generatePassword() {
   // Ask four user Input
-  passwordLength = prompt("How many characters would you like your password? Choose between 8 and 128");
+  passwordLength = prompt("How many characters would you like your password? Choose between 6 and 12");
   console.log("Password length " + passwordLength);
   
   if(!passwordLength) {
     alert("Required value");
 
-  } else if (passwordLength < 8 || passwordLength > 128) {
-    passwordLength = prompt("You must choose between 8 and 128");
+  } else if (passwordLength < 6 || passwordLength > 12) {
+    passwordLength = prompt("You must choose between 6 and 12");
     console.log("Password length " + passwordLength);
   
   } else { 
@@ -124,7 +124,7 @@ function generatePassword() {
     console.log(userChoices);
   };
 
-  // Empty variable for the password lenght
+  // Empty variable for the password length
   var passwordBlank = [];
   
   // Loop for random selection
